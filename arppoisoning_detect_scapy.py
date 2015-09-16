@@ -1,6 +1,6 @@
 __author__ = 'besimaltnok'
 
-AP_mac = 'AP_MAC'
+AP_mac = '_AP_MAC_'
 
 from scapy.all import *
 

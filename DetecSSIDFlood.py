@@ -26,4 +26,4 @@ def DetectSSIDFlood(pkt):
 				ssid_list.append(ssid)	
 
 
-sniff(iface='wlan6mon',prn=DetectSSIDFlood)
+sniff(iface='wlan0mon',prn=DetectSSIDFlood)

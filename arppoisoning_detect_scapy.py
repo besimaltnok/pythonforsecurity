@@ -1,5 +1,17 @@
 __author__ = 'besimaltnok'
 
-from scapy.all import * 
+AP_mac = 'AP_MAC'
 
-AP_mac = ''
+from scapy.all import *
+
+def ArpPoisoning(pkt):
+	if pkt.haslayer(ARP):
+		if pkt.op == 2:
+			srchw = pkt.hwsrc
+			srcip = pkt.psrc
+			if srchw == AP :
+				print 'Detect ARP Poisoning !\n'
+				print 'IP  : ', srcip
+				print 'MAC : ', srchw
+
+sniff(iface='wlan0', prn=ArpPoisoning)

@@ -10,8 +10,6 @@ for j in range(len(ext_list)):
     plugin_id = ext_list[j]
     manifest = os.listdir(extensions_path+plugin_id)
     if manifest is None:
-        pass
-    else:
         full_path = extensions_path+ext_list[j] + "\\" + manifest[0] + "\\" + "manifest.json"
         with open(full_path) as data_file:
             data = json.load(data_file)

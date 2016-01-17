@@ -11,7 +11,7 @@ def ArpPoisoning(pkt):
 			srchw = pkt.hwsrc
 			srcip = pkt.psrc
 			if srchw == AP and srcip != Router_ip:
-				print 'Detect ARP Poisoning !\n'
+				print 'Detect ARP Poisoning !!\n'
 				print 'IP  : ', srcip
 				print 'MAC : ', srchw
 
